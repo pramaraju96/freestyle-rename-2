@@ -4,14 +4,14 @@ pipeline {
     	maven 'Maven'
     }
     stages {
+        
+        timeout(time: 1, unit: 'HOURS') {
         stage('Build') {
-            options {
-                timeout(time: 1, unit: 'HOURS') 
-            }
             steps {
                 echo 'Building...'
                 snDevOpsChange()
             }
+        }
         }
         stage('Test') {
             agent any 
