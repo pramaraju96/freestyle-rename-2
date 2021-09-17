@@ -5,13 +5,12 @@ pipeline {
     }
     stages {
         stage('Build') {
-            agent any 
-            steps {
-                snDevOpsChange()
-                echo "Building..."
-            }
             options {
-                timeout(time: 24, unit: "HOURS")
+                timeout(time: 1, unit: 'HOURS') 
+            }
+            steps {
+                echo 'Building...'
+                snDevOpsChange()
             }
         }
         stage('Test') {
