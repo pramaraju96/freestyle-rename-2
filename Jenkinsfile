@@ -3,15 +3,10 @@ pipeline {
     tools {
     	maven 'Maven'
     }
-    
-    options {
-                timeout(time: 1, unit: 'HOURS') 
-            }
     stages {        
         stage('Build') {            
             steps {
                 echo 'Building..'
-                script{
                     snDevOpsChange(changeRequestDetails:"""{
                           "setCloseCode":false,
                           "attributes":{
@@ -26,7 +21,6 @@ pipeline {
                              "priority":"1",
                           }
                     }""")
-                }
             }
         }
         stage('Test') {
