@@ -11,7 +11,9 @@ pipeline {
             }
             steps {
                 echo 'Building..'
-                snDevOpsChange()
+                scritp{
+                    snDevOpsChange()
+                }
             }
         }
         stage('Test') {
