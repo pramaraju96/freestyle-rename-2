@@ -7,20 +7,7 @@ pipeline {
         stage('Build') {           
             steps {
                 echo 'Building..'
-                    snDevOpsChange(changeRequestDetails:"""{
-                          "setCloseCode":true,
-                          "attributes":{
-                             "requested_by":{
-                                "name":"System Administrator"
-                             },
-                             "assigned_to":"a0e11bb23ba32300b200655593efc491",
-                             "category":"DevOps",
-                             "sys_created_on":"2021-02-09 18:58:41",
-                             "start_date": "2021-02-09 18:58:41",
-                             "end_date": "2022-02-09 18:58:41",
-                             "priority":"1",
-                          }
-                    }""")
+                    snDevOpsChange()
             }
         }
         stage('Test') {
