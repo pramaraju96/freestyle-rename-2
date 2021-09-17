@@ -12,7 +12,18 @@ pipeline {
             steps {
                 echo 'Building..'
                 script{
-                    snDevOpsChange()
+                    snDevOpsChange(changeRequestDetails:"""{
+                          "setCloseCode":false,
+                          "attributes":{
+                             "requested_by":{
+                                "name":"System Administrator"
+                             },
+                             "assigned_to":"a0e11bb23ba32300b200655593efc491",
+                             "category":"Service",
+                             "sys_created_on":"2021-02-09 18:58:41",
+                             "priority":"1",
+                          }
+                    }""")
                 }
             }
         }
