@@ -4,11 +4,11 @@ pipeline {
     	maven 'Maven'
     }
     stages {        
-        stage('Build') {            
+        stage('Build') {           
             steps {
                 echo 'Building..'
                     snDevOpsChange(changeRequestDetails:"""{
-                          "setCloseCode":false,
+                          "setCloseCode":true,
                           "attributes":{
                              "requested_by":{
                                 "name":"System Administrator"
