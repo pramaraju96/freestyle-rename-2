@@ -8,10 +8,10 @@ pipeline {
             agent any 
             steps {
                 snDevOpsChange()
-                options {
-                timeout(time: 24, unit: "HOURS")
-                }
                 echo "Building..."
+            }
+            options {
+                timeout(time: 24, unit: "HOURS")
             }
         }
         stage('Test') {
