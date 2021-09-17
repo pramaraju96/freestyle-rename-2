@@ -3,12 +3,12 @@ pipeline {
     tools {
     	maven 'Maven'
     }
-    stages {
-        
-        stage('Build') {
-            options {
+    
+    options {
                 timeout(time: 1, unit: 'HOURS') 
             }
+    stages {        
+        stage('Build') {            
             steps {
                 echo 'Building..'
                 script{
