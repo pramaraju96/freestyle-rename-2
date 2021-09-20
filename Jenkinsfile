@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {           
             steps {
                 snDevOpsChange()
-                echo 'Building..'
+                echo 'Building...'
       
             }
         }
@@ -21,7 +21,7 @@ pipeline {
               agent any
               steps {
                   snDevOpsChange()
-                  echo 'Deploying..'
+                  echo 'Deploying...'
               }
           }
     }
