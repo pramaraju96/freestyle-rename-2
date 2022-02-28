@@ -22,7 +22,7 @@ pipeline {
               steps {
                   snDevOpsChange()
                   echo 'Deploying...'
-                  echo "Change approved"
+                  echo "Change approved and implemented"
               }
           }
     }
