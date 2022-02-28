@@ -8,7 +8,7 @@ pipeline {
             steps {
                 snDevOpsChange()
                 echo 'Building...'
-      
+                echo "Change approved"
             }
         }
         stage('Test') {
