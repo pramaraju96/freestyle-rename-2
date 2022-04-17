@@ -14,7 +14,7 @@ pipeline {
         stage('Test') {
             agent any 
             steps {
-                echo 'Testing...'
+                echo 'In Testing stage...'
             }
         }
       stage('Deploy') {
