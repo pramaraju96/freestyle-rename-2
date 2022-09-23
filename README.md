@@ -1,5 +1,5 @@
 # freestyle
 
-#Start
-*Start
+# Start
+** Start
 # End of file
